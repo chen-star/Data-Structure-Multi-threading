@@ -39,5 +39,18 @@ public class Main {
         queueNoSize.enqueue(4);
         System.out.println(queueNoSize.deque());
         System.out.println(queueNoSize.deque());
+
+        System.out.println();
+
+        // Deque No Size
+        BoundedDequeNoSize<Integer> dequeNoSize = new BoundedDequeNoSize<>(3);
+        dequeNoSize.offerLast(1);
+        dequeNoSize.offerLast(2);
+        dequeNoSize.offerLast(3);
+        System.out.println(dequeNoSize.pollLast());
+        System.out.println(dequeNoSize.pollFirst());
+        dequeNoSize.offerFirst(4);
+        System.out.println(dequeNoSize.pollFirst());
+        System.out.println(dequeNoSize.pollLast());
     }
 }
